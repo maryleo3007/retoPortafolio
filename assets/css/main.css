@@ -30,17 +30,47 @@ div.pestana button.active {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
+    background-color: #ccc;
+    border: #e0e0d1 solid 2px;
+    height: 50px;
+    width: 97.2%;
+    color: white;
+    font-size: 16px;
 }
+.lblAgents{
+  font-style: white;
+  font-size: 16px;
+}
 
 /*estilo de los botones de agentes*/
-.botones-agents{
-  border: #e0e0d1 solid 2px;
-  height: 10px;
-  width: 200px;
-  background-color: #E0ECFF;
+
 
 .rounded-corners {
     behavior: url(/css/border-radius.htc);
     border-radius: 20px;
 
+}
+.buttonlink{
+  border: none;
+  background: #949191;
+  color: #0D0C0C;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  width:80px;
+  height:28px;
+  text-align: center;
+  line-height: 7px;
+
+}
+.buttonlink:hover{
+  background: rgba(184,180,180,0);
+  color: #B8B4B4;
+  box-shadow: inset 0 0 0 3px #B8B4B4;
+}
+#botones-agents{
+  background: rgba(184,180,180,0);
 }

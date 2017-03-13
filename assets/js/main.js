@@ -1,5 +1,3 @@
-
-
 var botones = document.getElementsByClassName("links")
 
 for(i=0; i<botones.length; i++){
@@ -19,7 +17,7 @@ for(i=0; i<botones.length; i++){
 
 
   });
-
+
 }
 
 function mostrar(event, elementId) {
