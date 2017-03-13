@@ -1,18 +1,18 @@
 div.pestana {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
 }
 
 /*Estilo de los botones de la pestaña*/
 div.pestana button {
     background-color: inherit;
-    float: left;
-    border: none;
+    float: right;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    behavior: url(/css/border-radius.htc);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 /* Cambia el color de los botones */
@@ -30,5 +30,9 @@ div.pestana button.active {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
 }
+
+.rounded-corners {
+    behavior: url(/css/border-radius.htc);
+    border-radius: 20px;
+}
