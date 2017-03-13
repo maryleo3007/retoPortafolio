@@ -1,6 +1,6 @@
 
-
 var botones = document.getElementsByClassName("links");
+
 
 for(i=0; i<botones.length; i++){
   botones[i].addEventListener("click", function(index){
@@ -19,10 +19,11 @@ for(i=0; i<botones.length; i++){
 
 
   });
+
 }
 
 var buttonsAgents = document.getElementsByClassName("agents");
-var buttonContent = document.getElementsById("buttoncontent");
+var buttonContent = document.getElementById("buttoncontent");
 
 for(i=0; i<buttonsAgents.length; i++){
 //arrayObjeto es un array con todos los objetos
@@ -31,7 +32,7 @@ for(i=0; i<buttonsAgents.length; i++){
                           return this.name == item.type;
                         });
     arrayFiltrado.forEach(function(item){
-        mostrar();
+      //  mostrar();
     });
 
   },this);
@@ -40,46 +41,35 @@ for(i=0; i<buttonsAgents.length; i++){
 
 //objeto donde estan todos los datos
 function Objeto (tema, status, adress ){
-
+  this.tema
   this.type
+  this.resources
 
 }
 
 
 function mostrar(){
+
   var post = document.createElement("div");
   var p = document.createElement("p");
-  var add = document.createElement("a");
-  add.addEventListener("click", function(){
+  var agregar = document.createElement("a");
+  agregar.setAttribute("href", "#");
+  agregar.innerHTML = "+ Specify Resources";
+  agregar.addEventListener("click", function(){
 
 
   });
 
+  for(i=0; i<this.resources.length; i++){
+    var eliminar = document.createElement("button");
+    eliminar.innerHTML = "x";
+    eliminar.addEventListener("click", function(){
+
+    });
+  }
 
 
 
 
 
 }
-
-/*
-
-function mostrar(event, elementId) {
-  var i, buttoncontent, buttonlinks;
-  buttoncontent = document.getElementsByClassName('buttoncontent');
-  for(var i = 0 ; i < buttoncontent.length ; i++){
-    buttoncontent[i].style.display = "none";
-  }
-  buttonlinks = document.getElementsByClassName('buttonlink');
-  for(var i = 0 ; i < buttonlinks.length ; i++){
-    buttonlinks[i].className =  buttonlinks[i].className.replace(" active", "");
-  }
-  document.getElementById(elementId).style.display = "block";
-  event.currentTarget.className += " active";
-
-  document.getElementById('all').style.display = "none";
-  document.getElementById('physical').style.display = "none";
-  document.getElementById('virtual').style.display = "none";
-  document.getElementById(elementId).style.display = "block";
-}
-*/

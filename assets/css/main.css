@@ -8,11 +8,11 @@ div.pestana button {
     float: right;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 1% 2%;
     transition: 0.3s;
     behavior: url(/css/border-radius.htc);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
 }
 
 /* Cambia el color de los botones */
@@ -27,18 +27,62 @@ div.pestana button.active {
 
 /* Cambia el estilo del contenido */
 .contenido {
+    background-size: 100%;
     display: none;
-    padding: 6px 12px;
+    padding: 2% 4%;
     border: 1px solid #ccc;
+    background-color: #ccc;
+    border: #e0e0d1 solid 2px;
+    color: white;
+    font-size: 90%;
 }
+.lblAgents{
+  font-style: white;
+  font-size: 80%;
+}
 
 /*estilo de los botones de agentes*/
-
-
-
 
 
 .rounded-corners {
     behavior: url(/css/border-radius.htc);
     border-radius: 20px;
+}
+.buttonlink{
+  border: none;
+  background: #949191;
+  color: #0D0C0C;
+  padding: 1%;
+  font-size: 60%;
+  border-radius: 25%;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  width:5%;
+  height:15%;
+  text-align: center;
+  line-height: 5%;
+
+}
+.buttonlink:hover{
+  background: rgba(184,180,180,0);
+  color: #B8B4B4;
+  box-shadow: inset 0 0 0 3px #B8B4B4;
+}
+#botones-agents{
+
+  background: rgba(184,180,180,0);
+}
+
+.contenedor{
+  position: relative;
+}
+.buttonContent{
+  position: absolute;
+  right: auto;
+
+}
+.sumary{
+  position: absolute;
+  left: auto;
 }

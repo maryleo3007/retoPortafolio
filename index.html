@@ -11,40 +11,45 @@
     <header>
 
     </header>
-    <div id = "cuadro">
+    <div>
         <div class="pestana">
           <button class="links" name = "help">Help</button>
           <button class="links" name = "agents">Agents</button>
           <button class="links" name = "dashboard">Dashboard</button>
           <button class="links" name = "mycruise">My Cruise</button>
         </div>
-        <div id = "dashboard" class="contenido">
+        <div class="principal">
+          <div id = "dashboard" class="contenido">
             <h1>Aqui va el contenido de la pestaña Dashboard</h1>
-        </div>
-        <div id = "mycruise" class="contenido">
+          </div>
+          <div id = "mycruise" class="contenido">
             <h1>Aqui va el contenido de la pestaña My Cruise</h1>
-        </div>
-        <div id= "agent" class="contenido">
-                <div class="botonesAgentes">
-                  <label>Agents</label>
-                  <button  name = "all" class="agents">All</button>
-                  <button  name = "physical" class="agents">Physical</button>
-                  <button  name = "virtual" class="agents">Virtual</button>
-                </div>
+          </div>
+          <div id= "agents" class="contenido">
+            <div id ="botones-agents" class = "botonesagents">
+              <label class = "lblAgents" for="">Agents</label>
+              <input type="button" value="All" class="buttonlink" onclick="mostrar(event,'all')">
+              <input type="button" value="Physical" class="buttonlink" onclick="mostrar(event,'physical')">
+              <input type="button" value="Virtual" class="buttonlink" onclick="mostrar(event, 'virtual')">
+            </div>
+            <div class="contenedor">
+              <div id = "all" class="buttonContent">
+                <h3>todos los elementos</h3>
+              </div>
+              <div class="sumary">
+              </div>
+            </div>
 
-                <div id = "buttoncontent" class="buttoncontent">
-                    <h3>Todos los elementos</h3>
-                </div>
-                <div class="division-vertical">
+          </div>
 
-                </div>
-        </div>
-        <div id = "help" class="contenido">
-          <h1>Aqui va el contenido de la pestaña Help</h1>
+          <div id = "help" class="contenido">
+            <h1>Aqui va el contenido de la pestaña Help</h1>
+          </div>
+
         </div>
 
     </div>
 
-  <script src="assets/js/main.js" charset="utf-8"></script>
+    <script src="assets/js/main.js" charset="utf-8"></script>
   </body>
 </html>
