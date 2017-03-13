@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reto Thoughtworks</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <header>
 
-  </header>
-  <div id = "pestanias">
-      <div id = "botones" class="tab">
-          <button class="tablinks" onclick="openCity(event, 'Dashboard')">Dashboard</button>
-          <button class="tablinks" onclick="openCity(event, 'MyCruse')">MyCruse</button>
-          <button class="tablinks" onclick="openCity(event, 'Agents')">Agents</button>
-          <button class="tablinks" onclick="openCity(event, 'Help')">Help</button>
-      </div>
-      <div id = "Dashboard" class="tabcontent"></div>
-      <div id = "MyCruse" class="tabcontent"></div>
-      <div id= "Agents" class="tabcontent">
-            <div id = "botones-agents" class = "botones-agents">
-                  <label for="">Agents</label>
-                  <input type="button" value="All" class="buttonlink" onclick="mostrar(event,'all')">
-                  <input type="button" value="Physical" class="buttonlink" onclick="mostrar(event,'physical')">
-                  <input type="button" value="Virtual" class="buttonlink" onclick="mostrar(event, 'virtual')">
+    </header>
+    <div id = "cuadro">
+        <div class="pestana">
+          <button class="links" name = "help">Help</button>
+          <button class="links" name = "agents">Agents</button>
+          <button class="links" name = "dashboard">Dashboard</button>
+          <button class="links" name = "mycruise">My Cruise</button>
+        </div>
+        <div id = "dashboard" class="contenido">
+            <h1>Aqui va el contenido de la pestaña Dashboard</h1>
+        </div>
+        <div id = "mycruise" class="contenido">
+            <h1>Aqui va el contenido de la pestaña My Cruise</h1>
+        </div>
+        <div id= "agents" class="contenido">
+          <div id = "botones-agents" class = "botones-agents">
+                <label for="">Agents</label>
+                <input type="button" value="All" class="buttonlink" onclick="mostrar(event,'all')">
+                <input type="button" value="Physical" class="buttonlink" onclick="mostrar(event,'physical')">
+                <input type="button" value="Virtual" class="buttonlink" onclick="mostrar(event, 'virtual')">
 
-                  <div id = "all" class="buttoncontent">
-                      <h3>todos los elementos</h3>
-                  </div>
-                  <div id = "physical" class="buttoncontent">
-                    <h3>elementos fisicos</h3>
-                  </div>
-                  <div id = "virtual" class="buttoncontent">
-                    <h3>elementos virtuales</h3>
-                  </div>
-            </div>
-        <div id = "content-agents" ></div>
-      </div>
-      <div id = "Help" class="tabcontent"></div>
+                <div id = "all" class="buttoncontent">
+                    <h3>todos los elementos</h3>
+                </div>
+                <div id = "physical" class="buttoncontent">
+                  <h3>elementos fisicos</h3>
+                </div>
+                <div id = "virtual" class="buttoncontent">
+                  <h3>elementos virtuales</h3>
+                </div>
+          </div>
+        </div>
+        <div id = "help" class="contenido">
+          <h1>Aqui va el contenido de la pestaña Help</h1>
+        </div>
 
-  </div>
+    </div>
 
-<script src="assets/js/main.js" charset="utf-8"></script>
-</body>
+  <script src="assets/js/main.js" charset="utf-8"></script>
+  </body>
 </html>

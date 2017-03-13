@@ -1,41 +1,46 @@
-div.tab {
+div.pestana {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
-div.tab button {
+/*Estilo de los botones de la pestaña*/
+div.pestana button {
     background-color: inherit;
-    float: left;
-    border: none;
+    float: right;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    behavior: url(/css/border-radius.htc);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-/* Change background color of buttons on hover */
-div.tab button:hover {
+/* Cambia el color de los botones */
+div.pestana button:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-div.tab button.active {
+div.pestana button.active {
     background-color: #ccc;
 }
 
-/* Style the tab content */
-.tabcontent {
+/* Cambia el estilo del contenido */
+.contenido {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
 }
+
 /*estilo de los botones de agentes*/
 .botones-agents{
   border: #e0e0d1 solid 2px;
   height: 10px;
   width: 200px;
   background-color: #E0ECFF;
+
+.rounded-corners {
+    behavior: url(/css/border-radius.htc);
+    border-radius: 20px;
+
 }
