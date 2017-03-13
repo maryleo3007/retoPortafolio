@@ -33,14 +33,12 @@ div.pestana button.active {
 }
 
 /*estilo de los botones de agentes*/
-.botones-agents{
-  border: #e0e0d1 solid 2px;
-  height: 10px;
-  width: 200px;
-  background-color: #E0ECFF;
+
+
+
+
 
 .rounded-corners {
     behavior: url(/css/border-radius.htc);
     border-radius: 20px;
-
 }

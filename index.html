@@ -24,23 +24,20 @@
         <div id = "mycruise" class="contenido">
             <h1>Aqui va el contenido de la pestaña My Cruise</h1>
         </div>
-        <div id= "agents" class="contenido">
-          <div id = "botones-agents" class = "botones-agents">
-                <label for="">Agents</label>
-                <input type="button" value="All" class="buttonlink" onclick="mostrar(event,'all')">
-                <input type="button" value="Physical" class="buttonlink" onclick="mostrar(event,'physical')">
-                <input type="button" value="Virtual" class="buttonlink" onclick="mostrar(event, 'virtual')">
+        <div id= "agent" class="contenido">
+                <div class="botonesAgentes">
+                  <label>Agents</label>
+                  <button  name = "all" class="agents">All</button>
+                  <button  name = "physical" class="agents">Physical</button>
+                  <button  name = "virtual" class="agents">Virtual</button>
+                </div>
 
-                <div id = "all" class="buttoncontent">
-                    <h3>todos los elementos</h3>
+                <div id = "buttoncontent" class="buttoncontent">
+                    <h3>Todos los elementos</h3>
                 </div>
-                <div id = "physical" class="buttoncontent">
-                  <h3>elementos fisicos</h3>
+                <div class="division-vertical">
+
                 </div>
-                <div id = "virtual" class="buttoncontent">
-                  <h3>elementos virtuales</h3>
-                </div>
-          </div>
         </div>
         <div id = "help" class="contenido">
           <h1>Aqui va el contenido de la pestaña Help</h1>

@@ -1,6 +1,6 @@
 
 
-var botones = document.getElementsByClassName("links")
+var botones = document.getElementsByClassName("links");
 
 for(i=0; i<botones.length; i++){
   botones[i].addEventListener("click", function(index){
@@ -19,8 +19,50 @@ for(i=0; i<botones.length; i++){
 
 
   });
-
 }
+
+var buttonsAgents = document.getElementsByClassName("agents");
+var buttonContent = document.getElementsById("buttoncontent");
+
+for(i=0; i<buttonsAgents.length; i++){
+//arrayObjeto es un array con todos los objetos
+  buttonsAgents[i].addEventListener("click", function(index){
+    var arrayFiltrado = arrayObjeto.filter(function(item){
+                          return this.name == item.type;
+                        });
+    arrayFiltrado.forEach(function(item){
+        mostrar();
+    });
+
+  },this);
+}
+
+
+//objeto donde estan todos los datos
+function Objeto (tema, status, adress ){
+
+  this.type
+
+}
+
+
+function mostrar(){
+  var post = document.createElement("div");
+  var p = document.createElement("p");
+  var add = document.createElement("a");
+  add.addEventListener("click", function(){
+
+
+  });
+
+
+
+
+
+
+}
+
+/*
 
 function mostrar(event, elementId) {
   var i, buttoncontent, buttonlinks;
@@ -34,9 +76,10 @@ function mostrar(event, elementId) {
   }
   document.getElementById(elementId).style.display = "block";
   event.currentTarget.className += " active";
-  /*
+
   document.getElementById('all').style.display = "none";
   document.getElementById('physical').style.display = "none";
   document.getElementById('virtual').style.display = "none";
-  document.getElementById(elementId).style.display = "block";*/
+  document.getElementById(elementId).style.display = "block";
 }
+*/
