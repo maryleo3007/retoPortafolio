@@ -18,13 +18,27 @@
           <button class="tablinks" onclick="openCity(event, 'Agents')">Agents</button>
           <button class="tablinks" onclick="openCity(event, 'Help')">Help</button>
       </div>
-      <div id = "Dashboard" class="tabcontent">
-          <h1>hola</h1>
+      <div id = "Dashboard" class="tabcontent"></div>
+      <div id = "MyCruse" class="tabcontent"></div>
+      <div id= "Agents" class="tabcontent">
+            <div id = "botones-agents" class = "botones-agents">
+                  <label for="">Agents</label>
+                  <input type="button" value="All" class="buttonlink" onclick="mostrar(event,'all')">
+                  <input type="button" value="Physical" class="buttonlink" onclick="mostrar(event,'physical')">
+                  <input type="button" value="Virtual" class="buttonlink" onclick="mostrar(event, 'virtual')">
+
+                  <div id = "all" class="buttoncontent">
+                      <h3>todos los elementos</h3>
+                  </div>
+                  <div id = "physical" class="buttoncontent">
+                    <h3>elementos fisicos</h3>
+                  </div>
+                  <div id = "virtual" class="buttoncontent">
+                    <h3>elementos virtuales</h3>
+                  </div>
+            </div>
+        <div id = "content-agents" ></div>
       </div>
-      <div id = "MyCruse" class="tabcontent">
-          <h1>dashh contents</h1>
-      </div>
-      <div id= "Agents" class="tabcontent"></div>
       <div id = "Help" class="tabcontent"></div>
 
   </div>
