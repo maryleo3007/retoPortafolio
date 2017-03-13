@@ -1,11 +1,11 @@
-div.tab {
+div.pestana {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
-div.tab button {
+/*Estilo de los botones de la pestaña*/
+div.pestana button {
     background-color: inherit;
     float: left;
     border: none;
@@ -15,18 +15,18 @@ div.tab button {
     transition: 0.3s;
 }
 
-/* Change background color of buttons on hover */
-div.tab button:hover {
+/* Cambia el color de los botones */
+div.pestana button:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-div.tab button.active {
+div.pestana button.active {
     background-color: #ccc;
 }
 
-/* Style the tab content */
-.tabcontent {
+/* Cambia el estilo del contenido */
+.contenido {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
