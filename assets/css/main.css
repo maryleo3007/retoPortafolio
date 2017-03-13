@@ -30,25 +30,46 @@ div.pestana button.active {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    background-color: #ccc;
-    border: #e0e0d1 solid 2px;
-    height: 50px;
+    position: relative;
+
     width: 97.2%;
-    color: white;
+    /*color: white;*/
     font-size: 16px;
-}
+
+}
 .lblAgents{
-  font-style: white;
-  font-size: 16px;
+  color: white;
+}
+/*estilo de los botones de agentes*/
+.botonesagents{
+  /*margin-top: 0.7em;*/
+  height: 45px;
+  background-color: #ccc;
+  border: #e0e0d1 solid 2px;
 }
 
-/*estilo de los botones de agentes*/
-
+.buttoncontent{
+  border: 2px solid #ccc;
+  margin-top: 1.0em;
+}
+.listAgents{
+  position: absolute;
+  width: 80%;
+  left: 0%;
+}
+.sumaryAgents{
+  border: 1px solid #ccc;
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  float: right;
+  border: 2px solid #ccc;
+  width: 20%;
+}
 
 .rounded-corners {
     behavior: url(/css/border-radius.htc);
     border-radius: 20px;
-
 }
 .buttonlink{
   border: none;
@@ -61,16 +82,13 @@ div.pestana button.active {
   box-sizing: border-box;
   transition: all 500ms ease;
   width:80px;
-  height:28px;
+  height:25px;
   text-align: center;
   line-height: 7px;
 
 }
 .buttonlink:hover{
-  background: rgba(184,180,180,0);
-  color: #B8B4B4;
+  background: #E6E3E3;
+  color: #1F1E1E;
   box-shadow: inset 0 0 0 3px #B8B4B4;
-}
-#botones-agents{
-  background: rgba(184,180,180,0);
 }

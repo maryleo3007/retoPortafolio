@@ -9,7 +9,8 @@
   </head>
   <body>
     <header>
-
+        Sign in as <a href="">Marilu</a>
+        <a href=""> Sign Out</a>
     </header>
     <div id = "cuadro">
         <div class="pestana">
@@ -26,32 +27,33 @@
         </div>
         <div id= "agents" class="contenido">
             <div id ="botones-agents" class = "botonesagents">
-                  
                   <label class = "lblAgents" for="">Agents</label>
                   <input type="button" value="All" class="buttonlink" onclick="mostrar(event,'all')">
                   <input type="button" value="Physical" class="buttonlink" onclick="mostrar(event,'physical')">
                   <input type="button" value="Virtual" class="buttonlink" onclick="mostrar(event, 'virtual')">
             </div>
-            <div>
-              <div id = "all" class="buttoncontent">
-                  <h3>todos los elementos</h3>
-              </div>
-              <div id = "physical" class="buttoncontent">
-                <h3>elementos fisicos</h3>
-              </div>
-              <div id = "virtual" class="buttoncontent">
-                <h3>elementos virtuales</h3>
-              </div>
+            <div class="listAgents">
+                  <div id = "all" class="buttoncontent">
+                      <h3>todos los elementos</h3>
+                  </div>
+                  <div id = "physical" class="buttoncontent">
+                    <h3>elementos fisicos</h3>
+                  </div>
+                  <div id = "virtual" class="buttoncontent">
+                    <h3>elementos virtuales</h3>
+                  </div>
             </div>
-            <div>
+            <div class="sumaryAgents">
+              <h3>Sumary</h3>
+
+              <h3>History</h3>
 
             </div>
 
-        </div>
-        <div id = "help" class="contenido">
-          <h1>Aqui va el contenido de la pestaña Help</h1>
-        </div>
-
+       </div>
+       <div id = "help" class="contenido">
+         <h1>Aqui va el contenido de la pestaña Help</h1>
+       </div>
     </div>
 
   <script src="assets/js/main.js" charset="utf-8"></script>
