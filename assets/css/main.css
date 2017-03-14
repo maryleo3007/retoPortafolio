@@ -2,14 +2,30 @@ h1{
   text-align: left;
 }
 
-.ventana{
-  margin-left: 10%;
-  margin-right: 10%;
-  position: relative;
-  width: 80%;
+header{
+float: right;
+
 }
 
-.contenido button{
+.ventanaPrincipal{
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+  width: 90%;
+}
+
+.contenido {
+  opacity: 0;
+  z-index: -100;
+  left: 0%;
+  width: 100%;
+  position: absolute;
+
+}
+
+
+
+button{
 
   background-color: #f9f9f9;
   border-color: black black #f1f1f1 black;
@@ -18,7 +34,7 @@ h1{
   cursor: pointer;
   display: block;
   float: right;
-  font-size: 16px;
+  font-size: 16%;
   height: 40px;
   line-height: 40px;
   margin-left: 4px;
@@ -30,8 +46,16 @@ h1{
 
 }
 
+button:hover {
+    background-color: #ddd;
+}
 
-.principal{
+button.active {
+    background-color: #ccc;
+}
+
+
+.subVentana{
 
   background-color: #f1f1f1;
 	border-color: black;
@@ -41,14 +65,6 @@ h1{
 	width: 100%;
 }
 
-.contenido {
-  opacity: 0;
-  z-index: -100;
-  left: 0%;
-  width: 100%;
-  position: absolute;
-
-}
 
 
 .buttonlink {
@@ -62,25 +78,15 @@ h1{
 	padding: 0 15px;
 }
 
-#menu-agents a:hover {
-  background-color: #BDBDBD;
 
-}
-
-#menu-agents a:active {
-  background-color: #F2F2F2;
-
-}
-
-
-.pysical {
+.buttonContent {
   width: 50%;
 	height: 450px;
   float: left;
 	display: inline-block;
 }
 
-.sumaryAgents {
+.sumary {
 
   width: 30%;
 	height: 444px;
