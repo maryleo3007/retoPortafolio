@@ -1,112 +1,67 @@
-div.pestana {
-    overflow: hidden;
+h1{
+  text-align: left;
 }
 
-/*Estilo de los botones de la pestaña*/
-div.pestana button {
-    background-color: inherit;
-    float: right;
-    outline: none;
-    cursor: pointer;
-    padding: 1% 2%;
-    transition: 0.3s;
-    behavior: url(/css/border-radius.htc);
-    border-top-left-radius: 40%;
-    border-top-right-radius: 40%;
+.ventana{
+  margin-left: 15%;
+  margin-right: 15%;
+  position: relative;
+  width: 70%;
 }
 
-/* Cambia el color de los botones */
-div.pestana button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-div.pestana button.active {
-    background-color: #ccc;
-}
-
-/* Cambia el estilo del contenido */
-.contenido {
-    background-size: 100%;
-    display: none;
-    padding: 2% 4%;
-    border: 1px solid #ccc;
-    position: relative;
-
-    width: 97.2%;
-    /*color: white;*/
-    font-size: 16px;
-
-}
-.lblAgents{
-  color: white;
-}
-/*estilo de los botones de agentes*/
-.botonesagents{
-  /*margin-top: 0.7em;*/
-  height: 45px;
-  background-color: #ccc;
-  border: #e0e0d1 solid 2px;
-}
-
-.buttoncontent{
-  border: 2px solid #ccc;
-  margin-top: 1.0em;
-}
-.listAgents{
-  position: absolute;
-  width: 80%;
-  left: 0%;
-}
-.sumaryAgents{
-  border: 1px solid #ccc;
-  width: 100%;
-  position: absolute;
-  right: 0%;
+.contenedor-grande button{
+  height: 30px;
+  background-color: #f9f9f9;
+  border-color: black black #f1f1f1 black;
+  border-style: solid;
+  color: #888;
+  cursor: pointer;
+  display: block;
   float: right;
-  border: 2px solid #ccc;
-  width: 20%;
-}
-
-.rounded-corners {
-    behavior: url(/css/border-radius.htc);
-    border-radius: 20px;
-}
-.buttonlink{
-  border: none;
-  background: #949191;
-  color: #0D0C0C;
-  padding: 1%;
-  font-size: 60%;
-  border-radius: 25%;
-  position: relative;
-  box-sizing: border-box;
-  transition: all 500ms ease;
-  width:80px;
-  height:25px;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 4px;
+  padding: 0 24px;
   text-align: center;
-  line-height: 5%;
+  behavior: url(/css/border-radius.htc);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
 
 }
-.buttonlink:hover{
-  background: #E6E3E3;
-  color: #1F1E1E;
-  box-shadow: inset 0 0 0 3px #B8B4B4;
-}
-#botones-agents{
 
-  background: rgba(184,180,180,0);
+.contenedor-grande button:hover{
+  background-color: #ddd;
+	color: #666;
 }
 
-.contenedor{
-  position: relative;
+.contenedor-grande button:checked{
+  background-color: gray;
+	color: white;
+	position: relative;
 }
-.buttonContent{
+
+
+.principal{
+  background-color: #f1f1f1;
+	border-color: black;
+	border-style: solid;
+	min-height: 500px;
+	position: relative;
+	width: 100%;
+}
+
+.contenido {
+  opacity: 0;
   position: absolute;
-  right: auto;
+  z-index: -100;
 
 }
-.sumary{
-  position: absolute;
-  left: auto;
+
+.contenedor-grande button#bt1:checked ~ .principal #help,
+.contenedor-grande button#bt2:checked ~ .principal #agents,
+.contenedor-grande button#bt3:checked ~ .principal #dashboard,
+.contenedor-grande button#bt4:checked ~ .principal #mycruise{
+	opacity: 1;
+	z-index: 100;
 }
