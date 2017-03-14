@@ -7,15 +7,20 @@ header{
 	margin-right: 5%;
 	position: relative;
 	width: 90%;
-  height: 100%;
 }
 
 div.pestana {
     overflow: hidden;
+    position: relative;
+}
+.contenido{
+  width: 100%;
+  position: relative;
+
 }
 
 /*Estilo de los botones de la pestaña*/
-div.pestana button {
+button {
     background-color: inherit;
     float: right;
     outline: none;
@@ -28,12 +33,12 @@ div.pestana button {
 }
 
 /* Cambia el color de los botones */
-div.pestana button:hover {
+button:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-div.pestana button.active {
+button.active {
     background-color: #ccc;
 }
 
@@ -53,6 +58,9 @@ div.pestana button.active {
 
 h3{
   font-size: 100%;
+}
+p{
+  font-size: 80%;
 }
 
 .contenidoTab {
@@ -92,23 +100,16 @@ h3{
   line-height: 5%;
 
 }
-.buttonlink:hover{
-  background: #E6E3E3;
-  color: #1F1E1E;
-  box-shadow: inset 0 0 0 3px #B8B4B4;
-}
-
-
-
 
 .buttonContent{
   width: 75%;
   position: absolute;
   left: 0%;
+  height: auto;
 }
 
 .sumary{
-  border: 1px solid #ccc;
+  border: 1% solid #ccc;
   position: absolute;
   right: 0%;
   float: right;
