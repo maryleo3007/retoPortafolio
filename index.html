@@ -8,79 +8,77 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <header>
-        Sign in as <a href="">Marilu</a>
-        <a href=""> Sign Out</a>
-    </header>
+    <span id = "login">Sign in as <a href="">Member</a>
+          <a href=""> Sign Out</a>
+    </span>
+
     <div class = "ventana">
       <h1>Cruise</h1>
 
-      <div class="contenido-grande">
-        <!--
-            <button type="button" name="button" class="tabs">Help</button>
-            <button type="button" name="button" class="tabs">Agents</button>
-            <button type="button" name="button" class="tabs">My Cruise</button>
-            <button type="button" name="button" class="tabs">Dashboard</button>
-        -->
+      <div class="contenido-grande" id = "contenidoGrande">
 
-            <input type="radio" name ="buttonLinks" id="help">
-            <label>Help</label>
+            <input type="radio" name ="buttonLinks" id="help" >
+            <label for = "help">Help</label>
 
-            <input type="radio" name ="buttonLinks" id ="agents" checked>
-            <label>Agents</label>
+            <input type="radio" name ="buttonLinks" id ="agents" checked >
+            <label for = "agents">Agents</label>
 
-            <input type="radio" name ="buttonLinks" id ="mycruise">
-            <label>My cruise</label>
+            <input type="radio" name ="buttonLinks" id ="mycruise" >
+            <label for = "mycruise">My cruise</label>
 
-            <input type="radio" name ="buttonLinks" id ="dashboard">
-            <label>Dashboard</label>
+            <input type="radio" name ="buttonLinks" id ="dashboard" >
+            <label for = "dashboard">Dashboard</label>
 
-            <div class="principal">
+            <div class="principal" id = "principal">
 
-                <div id = "contenido-help" class="contenido">
+                <div id = "contenidoHelp" class="contenido">
                   <h3>Aqui va el contenido de la pestaña Help</h3>
                 </div>
-                <div id = "contenido-agents" class="contenido">
-                    <div id ="menu-agents" class = "botonesagents">
-                    <span class = "lblAgents">Agents</span>
-                    <a href="#" class="buttonlink">All</a>
-                    <a href="#" class="buttonlink">Pysical</a>
-                    <a href="#" class="buttonlink">Virtual</a>
+                <div id = "contenidoAgents" class="contenido">
+                    <div id ="menuAgents">
+                      <span class = "lblAgents" id ="span">Agents</span>
+                      <a href="" class="buttonlink">All</a>
+                      <a href="" class="buttonlink">Pysical</a>
+                      <a href="" class="buttonlink">Virtual</a>
                     </div>
-                    <div style="width:100%">
-                      <div class="pysical">
-                        <p>todos los elementos de pysical</p>
-
-                      </div>
-                      <div class="sumaryAgents">
-                        <h3>Sumary</h3>
-                        <hr>
-                        <p>Building 2</p>
-                        <p>Idle  2</p>
-                        <h3>History</h3>
-                        <hr>
-                        <p>bjstdmngbgr02/Acceptance_test</p>
-                        <p>bjstdmngbgr02/Acceptance_test</p>
-                      </div>
+                    <div class="pysical">
+                      <p>Todos los elementos de pysical</p>
 
                     </div>
-
-
+                    <div class="sumaryAgents">
+                      <h3>Sumary</h3>
+                      <hr>
+                      <p>Building 2</p>
+                      <p>Idle  2</p>
+                      <h3>History</h3>
+                      <hr>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      <p>bjstdmngbgr02/Acceptance_test</p>
+                      
+                    </div>
 
                 </div>
-                <div id = "contenido-dashboard" class="contenido">
+                <div id = "contenidoDashboard" class="contenido">
                   <h3>Aqui va el contenido de la pestaña Dashboard</h3>
                 </div>
-                <div id = "contenido-mycruise" class="contenido">
+                <div id = "contenidoMycruise" class="contenido">
                   <h3>Aqui va el contenido de la pestaña My Cruise</h3>
                 </div>
-        </div>
+        </div><!--termina principal-->
 
 
 
-      </div>
+      </div>  <!--termina contenido-grande-->
 
-    </div>
+    </div>  <!--termina ventana-->
     <!--<script src="assets/js/main.js" charset="utf-8"></script>-->
   </body>
 </html>

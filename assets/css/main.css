@@ -1,27 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli");
+
+#login{
+  float: right;
+}
+
 h1{
   text-align: left;
+  font-size-adjust: auto;
 }
 
 .ventana{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   position: relative;
-  width: 80%;
+  width: 90%;
+  overflow: hidden;
 }
 
 .contenido-grande label{
-  background-color: #f9f9f9;
+  background-color: #F2F1F1;
   border-color: black black #f1f1f1 black;
   border-style: solid;
-  color: #888;
+  color: #555;
   cursor: pointer;
   display: block;
   float: right;
-  font-size: 16px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: 4px;
-  padding: 0 24px;
+  font-size: 90%;
+  height: auto;
+  line-height: 250%;
+  margin-left: 0.2%;
+  padding: 0 2%;
   text-align: center;
   behavior: url(/css/border-radius.htc);
   border-top-left-radius: 40%;
@@ -36,8 +44,8 @@ h1{
 }
 
 .contenido-grande input:hover + label{
-  background-color: #ddd;
-	color: #666;
+  background-color: #eee;
+	color: #555;
 }
 
 .contenido-grande input:checked + label{
@@ -49,12 +57,12 @@ h1{
 
 .principal{
 
-  background-color: #f1f1f1;
+  background-color: white;
 	border-color: black;
 	border-style: solid;
 	min-height: 500px;
 	position: relative;
-	width: 100%;
+	width: auto;
 }
 
 .contenido {
@@ -66,20 +74,27 @@ h1{
 
 }
 
-#menu-agents{
+#contenidoGrande input#help:checked ~ #principal #contenidoHelp,
+#contenidoGrande input#agents:checked ~ #principal #contenidoAgents,
+#contenidoGrande input#mycruise:checked ~ #principal #contenidoDashboard,
+#contenidoGrande input#dashboard:checked ~ #principal #contenidoMycruise{
+	opacity: 1;
+	z-index: 100;
+}
+
+
+#menuAgents{
 
   background-color: gray;
 	color: white;
 	width: 100%;
-	height: 50px;
-	margin: 0;
-	padding: 0;
+  padding: 0% 0% 2%;
 }
 
-#menu-agents span {
-  line-height: 50px;
+#span {
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 2%;
+  padding: 2% 0% 0%
 }
 
 .buttonlink {
@@ -89,22 +104,24 @@ h1{
 	border-width: 2px;
 	text-decoration: none;
 	border-style: solid;
-	border-radius: 15px;
-	padding: 0 15px;
+	padding: 0 2%;
+  behavior: url(/css/border-radius.htc);
+  border-radius: 45%;
+
 }
 
-#menu-agents a:hover {
+#menuAgents a:hover {
   background-color: #BDBDBD;
 
 }
 
-#menu-agents a:active {
+#menuAgents a:active {
   background-color: #F2F2F2;
 
 }
 
 .pysical {
-  width: 50%;
+  width: 60%;
 	height: 450px;
   float: left;
 	display: inline-block;
@@ -112,11 +129,12 @@ h1{
 
 .sumaryAgents {
 
-  width: 30%;
+  width: 25%;
 	height: 444px;
 	float: right;
 	border-style: solid;
 	border-color: white white white black;
 	display: inline-block;
-	padding: 0 15px;
+	padding: 0 2%;
+  overflow: hidden;
 }
