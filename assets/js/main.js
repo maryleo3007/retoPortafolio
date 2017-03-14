@@ -1,23 +1,51 @@
+function ResourcesManager(){
 
-var botones = document.getElementsByName("links");
+  this.resources = [];
+  this.id = 0;
 
+  this.addResource = function(type){
 
-for(i=0; i<botones.length; i++){
-  botones[i].addEventListener("click", function(index){
+    this.resources.push({
+      id: this.id,
+      type: type,
 
-      var contenido = document.getElementsByClassName("contenido");
-      var links = document.getElementsByClassName("links");
+    });
+    this.id++;
 
-      for (i = 0; i < contenido.length; i++) {
-        contenido[i].style.display = "none";
-      }
-      for (i = 0; i < links.length; i++) {
-        links[i].className = links[i].className.replace(" active", "");
-      }
-      document.getElementById(this.name).style.display = "block";
-      this.className += " active";
+  }
 
+  this.printHtmlResource = function(parent){
+    parent.innerHTML = "";
+    this.resources.forEach(function(item){
+      parent.appendChild(this.createHtmlResource(item.type,item.id));
+    },this);
+  }
 
-  });
+  this.createHtmlResource = function(type,id){
+    var post = document.createElement("div");
+    span.setAttribute("data-id",id);
+    var span = document.createElement("span");
+    span.innerHTML = type;
+    var eliminar = document.createElement("a");
+    eliminar.setAttribute("href","#");
+    eliminar.addEventListener("click",function(e){
+        e.preventDefault();
+        var resourceId = e.target.parent.getAttribute("data-id");
+        delete this.resources[resourceId];
+
+    });
+    post.appendChild(span);
+    post.appendChild(eliminar);
+    return post;
+
+  }
 
 }
+
+
+window.addEventListener("load", function(){
+
+
+
+
+});
