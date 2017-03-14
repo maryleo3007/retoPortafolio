@@ -14,54 +14,60 @@
     </header>
     <div class = "ventana">
       <h1>Cruise</h1>
-      <div class="contenedor-grande">
+
+      <div class="contenido-grande">
         <!--botones-->
-        <button class="links" name = "help" id = "bt1">Help</button>
-        <button class="links" name = "agents" id = "bt2">Agents</button>
-        <button class="links" name = "dashboard" id = "bt3">Dashboard</button>
-        <button class="links" name = "mycruise" id = "bt4">My Cruise</button>
+            <label>Help</label>
+            <input type="radio" name ="buttonLinks" id="help">
 
-        <div class="principal">
+            <label>Agents</label>
+            <input type="radio" name ="buttonLinks" id ="agents" checked>
 
-          <div id = "help" class="contenido">
-            <h3>Aqui va el contenido de la pestaña Help</h3>
-          </div>
-          <div id= "agents" class="contenido">
-            <div id ="menu-help" class = "botonesagents">
-              <label class = "lblAgents" for="">Agents</label>
-              <input type="button" value="All" class="buttonlink">
-              <input type="button" value="Physical" class="buttonlink">
-              <input type="button" value="Virtual" class="buttonlink" >
-            </div>
-            <div class="listAgents">
-              <div id = "all" class="buttoncontent">
-                <p>todos los elementos</p>
-              </div>
-              <div id = "physical" class="buttoncontent">
-                <p>elementos fisicos</p>
-              </div>
-              <div id = "virtual" class="buttoncontent">
-                <p>elementos virtuales</p>
-              </div>
-            </div>
-            <div class="sumaryAgents">
-              <h3>Sumary</h3>
-              <hr>
-              <p>building 2</p>
-              <p>Idle  2</p>
-              <h3>History</h3>
-              <hr>
-              <p>bjstdmngbgr02/Acceptance_test</p>
-              <p>bjstdmngbgr02/Acceptance_test</p>
-            </div>
+            <label>My cruise</label>
+            <input type="radio" name ="buttonLinks" id ="mycruise">
 
-          </div>
-          <div id = "dashboard" class="contenido">
-            <h3>Aqui va el contenido de la pestaña Dashboard</h3>
-          </div>
-          <div id = "mycruise" class="contenido">
-            <h3>Aqui va el contenido de la pestaña My Cruise</h3>
-          </div>
+            <label>Dashboard</label>
+            <input type="radio" name ="buttonLinks" id ="dashboard">
+
+            <div class="principal">
+
+                <div id = "contenido-help" class="contenido">
+                  <h3>Aqui va el contenido de la pestaña Help</h3>
+                </div>
+                <div id = "contenido-agents" class="contenido">
+                    <div id ="menu-agents" class = "botonesagents">
+                    <span class = "lblAgents">Agents</span>
+                    <a href="#" class="buttonlink">All</a>
+                    <a href="#" class="buttonlink">Pysical</a>
+                    <a href="#" class="buttonlink">Virtual</a>
+                    </div>
+                    <div style="width:100%">
+                      <div class="pysical">
+                        <p>todos los elementos de pysical</p>
+
+                      </div>
+                      <div class="sumaryAgents">
+                        <h3>Sumary</h3>
+                        <hr>
+                        <p>Building 2</p>
+                        <p>Idle  2</p>
+                        <h3>History</h3>
+                        <hr>
+                        <p>bjstdmngbgr02/Acceptance_test</p>
+                        <p>bjstdmngbgr02/Acceptance_test</p>
+                      </div>
+
+                    </div>
+
+
+
+                </div>
+                <div id = "contenido-dashboard" class="contenido">
+                  <h3>Aqui va el contenido de la pestaña Dashboard</h3>
+                </div>
+                <div id = "contenido-mycruise" class="contenido">
+                  <h3>Aqui va el contenido de la pestaña My Cruise</h3>
+                </div>
         </div>
 
 
