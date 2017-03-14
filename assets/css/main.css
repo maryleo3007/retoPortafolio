@@ -1,5 +1,7 @@
 div.pestana {
     overflow: hidden;
+    width: 90%;
+
 }
 
 /*Estilo de los botones de la pestaña*/
@@ -74,6 +76,9 @@ div.pestana button.active {
   background: rgba(184,180,180,0);
 }
 
+.principal {
+  width: auto;
+}
 .contenedor{
   position: relative;
 }
