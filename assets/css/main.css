@@ -1,123 +1,123 @@
-header{
-  float: right;
+h1{
+  text-align: left;
 }
 
-.ventanaPrincipal{
-  margin-left: 5%;
-	margin-right: 5%;
-	position: relative;
-	width: 90%;
-}
-
-div.pestana {
-    overflow: hidden;
-    position: relative;
-}
-.contenido{
-  width: 100%;
+.ventana{
+  margin-left: 10%;
+  margin-right: 10%;
   position: relative;
-
+  width: 80%;
 }
 
-/*Estilo de los botones de la pestaña*/
-button {
-    background-color: inherit;
-    float: right;
-    outline: none;
-    cursor: pointer;
-    padding: 1% 2%;
-    transition: 0.3s;
-    behavior: url(/css/border-radius.htc);
-    border-top-left-radius: 40%;
-    border-top-right-radius: 40%;
-}
-
-/* Cambia el color de los botones */
-button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-button.active {
-    background-color: #ccc;
-}
-
-
-.subVentana {
-
-  background-color: #ccc;
-  border-color: #ccc;
+.contenido-grande label{
+  background-color: #f9f9f9;
+  border-color: black black #f1f1f1 black;
   border-style: solid;
-  position: relative;
-  width: 100%;
-}
-
-#agents {
+  color: #888;
+  cursor: pointer;
   display: block;
-}
-
-h3{
-  font-size: 100%;
-}
-p{
-  font-size: 80%;
-}
-
-.contenidoTab {
-  display: none;
-  width: 100%;
-}
-
-/*estilo de los botones de agentes*/
-.botonesagents{
-  height: 45%;
-  background-color: #ccc;
-  border: #e0e0d1 solid 2px;
-  width: 100%;
-  position: absolute;
-}
-
-.lblAgents{
-  font-style: white;
-  font-size: 100%;
-  width: 100%;
-
-}
-
-.buttonlink{
-  border: none;
-  background: #949191;
-  color: #0D0C0C;
-  padding: 1%;
-  font-size: 60%;
-  border-radius: 25%;
-  position: relative;
-  box-sizing: border-box;
-  transition: all 500ms ease;
-  width:5%;
-  height:15%;
-  text-align: center;
-  line-height: 5%;
-
-}
-
-.buttonContent{
-  width: 75%;
-  position: absolute;
-  left: 0%;
-  height: auto;
-}
-
-.sumary{
-  border: 1% solid #ccc;
-  position: absolute;
-  right: 0%;
   float: right;
-  border: 2px solid #ccc;
-  width: 25%;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 4px;
+  padding: 0 24px;
+  text-align: center;
+  behavior: url(/css/border-radius.htc);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+
 }
 
-.rounded-corners {
-    behavior: url(/css/border-radius.htc);
-    border-radius: 20px;
+.contenido-grande input{
+
+  height: 30px;
+	visibility: hidden;
+}
+
+.contenido-grande input:hover + label{
+  background-color: #ddd;
+	color: #666;
+}
+
+.contenido-grande input:checked + label{
+  background-color: grey;
+	color: white;
+	position: relative;
+}
+
+
+
+.principal{
+
+  background-color: #f1f1f1;
+	border-color: black;
+	border-style: solid;
+	min-height: 500px;
+	position: relative;
+	width: 100%;
+}
+
+.contenido {
+  opacity: 0;
+  z-index: -100;
+  left: 0%;
+  width: 100%;
+  position: absolute;
+
+}
+
+#menu-agents{
+
+  background-color: gray;
+	color: white;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+#menu-agents span {
+  line-height: 50px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.buttonlink {
+
+  background-color: white;
+	color: black;
+	border-width: 2px;
+	text-decoration: none;
+	border-style: solid;
+	border-radius: 15px;
+	padding: 0 15px;
+}
+
+#menu-agents a:hover {
+  background-color: #BDBDBD;
+
+}
+
+#menu-agents a:active {
+  background-color: #F2F2F2;
+
+}
+
+.pysical {
+  width: 50%;
+	height: 450px;
+  float: left;
+	display: inline-block;
+}
+
+.sumaryAgents {
+
+  width: 30%;
+	height: 444px;
+	float: right;
+	border-style: solid;
+	border-color: white white white black;
+	display: inline-block;
+	padding: 0 15px;
 }
