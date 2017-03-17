@@ -304,3 +304,11 @@ button.active {
   margin-top: -97px;
   background:#E0EDD4 center left 5px no-repeat;
 }
+
+.deny-box{
+  display: inline-block;
+  float: right;
+}
+.addSpecifyResources{
+  display: inline-block;
+}

@@ -9,8 +9,8 @@
   </head>
   <body>
 
-    <span id = "login">Sign in as <a href="">Member</a>
-          <a href=""> Sign Out</a>
+    <span id = "login">Sign in as<a href="">Member </a>
+          &#160&#160<a href=""><img src="assets/images/flecha.png" alt="">Sign Out</a>
     </span>
 
     <div class = "ventana">
@@ -49,11 +49,13 @@
                                 <span><strong>&#160bjstdmngbgr02.thoughtworks.com  </strong>|&#160idle |&#160 192.168.1.2| &#160/var/lib/cruise-agent
                                 </span><br>
                                 <a id = "apopup" href="" class="tooltip">+ Specify Resources  </a>
+                                <div class=""></div>
+                                <div class="deny-box"><img src="assets/images/deny.png" alt="">Deny</div>
                                       <div id = "box" class="box" style="display:none">
                                           <span> (Separate multiple resources name with commas) </br>
-                                          <input type="text" style="width:300px;"> </br>
-                                          <button type="button" name="button">Add resources</button>
-                                          <button id = "btn-close" type="button" name="button">Close</button>
+                                                <input type="text" style="width:300px;"> </br>
+                                                <button id = "buttonAddResource" type="button" name="button">Add resources</button>
+                                                <button id = "btn-close" type="button" name="button">Close</button>
                                           </span>
                                       </div>      
                             </div>
@@ -66,10 +68,11 @@
                                 <a id = "apopup" href="" class="tooltip">+ Specify Resources</a>
                                       <div id = "box" class="box" style="display:none">
                                           <span> (Separate multiple resources name with commas) </br>
-                                          <input type="text" style="width:470px;"> </br>
-                                          <button type="button" name="button">Add resources</button>
-                                          <button id = "btn-close" type="button" name="button">Close</button>
+                                            <input type="text" style="width:470px;"> </br>
+                                            <button type="button" name="button">Add resources</button>
+                                            <button id = "btn-close" type="button" name="button">Close</button>
                                           </span>
+
                                       </div>      
                             </div>
                         </div>
@@ -78,14 +81,15 @@
                             <div class = "contenidoResources">
                                 <span><strong>&#160bjstdmngbgr02.thoughtworks.com  </strong>|&#160idle |&#160 192.168.1.2| &#160/var/lib/cruise-agent
                                 </span><br>
-                                <a id = "apopup" href="" class="tooltip">+ Specify Resources</a>
+                                <a id = "apopup" href="" class="tooltip">+ Specify Resources
                                       <div id = "box" class="box" style="display:none">
                                           <span> (Separate multiple resources name with commas) </br>
                                           <input type="text" style="width:470px;"> </br>
                                           <button type="button" name="button">Add resources</button>
                                           <button id = "btn-close" type="button" name="button">Close</button>
                                           </span>
-                                      </div>      
+                                      </div>
+                                </a>   
                             </div>
                         </div>
                         <div id = "physicalResources4" class="physicalResources">
@@ -94,6 +98,7 @@
                                 <span><strong>&#160bjstdmngbgr02.thoughtworks.com  </strong>|&#160idle |&#160 192.168.1.2| &#160/var/lib/cruise-agent
                                 </span><br>
                                 <a id = "apopup" href="" class="tooltip">+ Specify Resources</a>
+                                <div class="deny-box"><img src="assets/images/deny.png" alt="">Deny</div>
                                       <div id = "box" class="box" style="display:none">
                                           <span> (Separate multiple resources name with commas) </br>
                                           <input type="text" style="width:470px;"> </br>
@@ -123,18 +128,15 @@
                       <p>bjstdmngbgr02/Acceptance_test</p>
 
                     </div>
-
-                </div>
+                </div>
                 <div id = "contenidoDashboard" class="contenido">
                   <h3>Aqui va el contenido de la pestaña Dashboard</h3>
                 </div>
                 <div id = "contenidoMycruise" class="contenido">
                   <h3>Aqui va el contenido de la pestaña My Cruise</h3>
                 </div>
-        </div><!--termina principal-->
+            </div><!--termina principal-->
       </div>
-
-
       </div>  <!--termina contenido-grande-->
     </div>  <!--termina ventana-->
     <script src="assets/js/main.js" charset="utf-8"></script>

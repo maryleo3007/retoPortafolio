@@ -3,23 +3,6 @@ function ResourcesManager(){
   this.resources = [];
   this.id = 0;
 
-
-for(i=0; i<botones.length; i++){
-  botones[i].addEventListener("click", function(index){
-
-      var contenido = document.getElementsByClassName("contenidoTab");
-
-      for (i = 0; i < contenido.length; i++) {
-        contenido[i].style.display = "none";
-      }
-      for (i = 0; i < botones.length; i++) {
-        botones[i].className = botones[i].className.replace("active", "");
-      }
-      document.getElementById(this.name).style.display = "block";
-      this.className += " active";
-
-  });
-
 }
 this.addResource = function(type){
 
@@ -29,7 +12,6 @@ this.addResource = function(type){
 
     });
     this.id++;
-
   }
 
   this.printHtmlResource = function(parent){
@@ -40,8 +22,7 @@ this.addResource = function(type){
   }
 
   this.createHtmlResource = function(type,id){
-    var post = document.createElement("div");
-    span.setAttribute("data-id",id);
+    
     var span = document.createElement("span");
     span.innerHTML = type;
     var eliminar = document.createElement("a");
@@ -60,19 +41,12 @@ this.addResource = function(type){
 
 
 window.addEventListener("load", function(){
+  var resourcesManager = new ResourcesManager();
+  var buttonAddResource = getElementById('buttonAddResource');
 
-  var apopup = document.getElementById('apopup');
-  apopup.addEventListener('click',function (event) {
-    event.preventDefault();
-    document.getElementById('box').style.display = "block";
-  });
-
-  var close = document.getElementById("btn-close");
-  close.addEventListener('click',function(event){+
-    event.preventDefault();
-    box.style.display = "none";
-  });
-
-
-
-});
+  buttonAddResource.addEventListener('click',function(){
+    var resourceArea = getElementById('textResource').value;
+    var resourceAreaSplit = resourceArea.split(",");
+    resourceArea.forEach(function(elemento){
+      resourcesManager.addResource(resourceAreaSplit);
+      resourcesManager.createHtmlResource(document.getElementById('addSpecifyResources'));});});});
