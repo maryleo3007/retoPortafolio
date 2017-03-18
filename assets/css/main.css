@@ -186,7 +186,7 @@ button.active {
 	border-style: solid;
 	padding: 0 2%;
   behavior: url(/css/border-radius.htc);
-  border-radius: 45%;
+  border-radius: 20%/60%;
 
 }
 
@@ -217,6 +217,15 @@ button.active {
 	display: inline-block;
 	padding: 0 2%;
   overflow: hidden;
+}
+
+.sumaryAgents p {
+  font-size: 70%;
+}
+
+h4{
+  margin: 5% 0% 5%;
+
 }
 .circulo{
   float: left;
@@ -267,42 +276,46 @@ button.active {
     margin-right: auto;
     margin-top: 10px;
 }
+
+
+
 .box {
- position: relative; /* Esta clase tiene que tener posicion relativa */
  color: #ff8c00 ; /* Color del texto */
-}
-
-
-.box {
- width: 450px;
+ width: 45%;
  background:#E0EDD4 center left 5px no-repeat;
  border: 2px solid black ;
- border-radius: 5px;
+ border-radius: 9%;
  border-color: #705F29;
- position: relative;
+ position: absolute;
  z-index: 10;
- top: 10px;
- left: -40px;
- padding-left: 10px;
- padding-bottom: 10px;
+ top: 33%;
+ left: 5%;
+ padding-left: 1%;
+ padding-bottom: 1%;
+ padding-top: 2%;
 }
 
 
 .box:after{
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 4%;
+  height: 20%;
   border-top: 2px solid #705F29;
   border-right: 0px solid #705F29;
   border-left: 2px solid #705F29;
   border-bottom: 0px solid #705F29;
-  top: 100%;
+  top: 112%;
   left: 30%;
   margin-left: -25px;
   content: '';
   transform: rotate(45deg);
-  margin-top: -97px;
-  background:#E0EDD4 center left 5px no-repeat;
+  margin-top: -25%;
+  background:#E0EDD4 center left 1% no-repeat;
+}
+
+div .box input {
+  visibility: visible;
+  width: 90%;
 }
 
 .deny-box{
@@ -310,5 +323,9 @@ button.active {
   float: right;
 }
 .addSpecifyResources{
+  display: inline-block;
+}
+
+.post{
   display: inline-block;
 }
