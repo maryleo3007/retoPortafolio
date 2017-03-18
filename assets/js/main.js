@@ -3,7 +3,7 @@ function ResourcesManager(){
   this.resources = [];
   this.id = 0;
 
-}
+
 this.addResource = function(type){
 
     this.resources.push({
@@ -22,7 +22,6 @@ this.addResource = function(type){
   }
 
   this.createHtmlResource = function(type,id){
-    
     var span = document.createElement("span");
     span.innerHTML = type;
     var eliminar = document.createElement("a");
@@ -42,7 +41,7 @@ this.addResource = function(type){
 
 window.addEventListener("load", function(){
   var resourcesManager = new ResourcesManager();
-  var buttonAddResource = getElementById('buttonAddResource');
+  var buttonAddResource = document.getElementById('buttonAddResource');
 
   buttonAddResource.addEventListener('click',function(){
     var resourceArea = getElementById('textResource').value;
