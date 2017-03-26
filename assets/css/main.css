@@ -328,6 +328,7 @@ div .box input {
 .addSpecifyResources{
   display: inline-block;
 }
+
 .showresources{
   position: relative;
   display: inline-block;
@@ -350,4 +351,5 @@ div .box input {
   text-decoration: none;
   vertical-align: middle;
   opacity: 0.5;
+
 }

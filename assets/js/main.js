@@ -1,15 +1,15 @@
+
 function ResourcesManager(){
-  this.resources = [];
-    this.id = 0;
-    this.addResource = function(type){
-       this.resources.push({
-          id: this.id,
-          type: type,
+    this.resources = [];
+    this.count = 0;
 
-        });
-       this.id++;
-    }
-
+    this.addResource = function(tipo){
+                         this.resources.push({
+                              id: this.count,
+                              type: tipo
+                          });
+                         this.count++;
+                      }
     this.printHtmlResource = function(parent){
       parent.innerHTML = "";
       this.resources.forEach(function(item){
@@ -19,30 +19,39 @@ function ResourcesManager(){
 
     this.createHtmlResource = function(type,id){
         var post = document.createElement("div");
-        post.setAttribute('data-id',id)
+
+        post.setAttribute("data-id",id);
         post.setAttribute("class","data-id");
+        post.style.display = "inline-block";
         var span = document.createElement("span");
         span.innerHTML = type;
 
         var eliminar = document.createElement("a");
         eliminar.setAttribute("href","#");
-
         var btneliminar = document.createElement("BUTTON");
         btneliminar.setAttribute("class","eliminarResource");
         var txtbtneliminar = document.createTextNode(" X");
 
+        var array = this.resources;
         btneliminar.addEventListener("click",function(e){
             e.preventDefault();
             var resourceId = e.target.parentNode.parentNode.getAttribute("data-id");
+            array = array.filter(function(item){
+              return item.id != resourceId;
+            });
             this.parentNode.parentNode.parentNode.removeChild(post);
         });
+        console.log(array);
         post.appendChild(span);
         post.appendChild(eliminar);
         eliminar.appendChild(btneliminar);
         btneliminar.appendChild(txtbtneliminar);
         return post;
     }
+
+
 }
+
 
 function posicionBox(box) {
   var mov = 20;
@@ -51,6 +60,7 @@ function posicionBox(box) {
   box = box.split("-");
   boxNew.style.top = (inicial + mov * box[1])+"%";
 }
+
 
 window.addEventListener("load", function(){
 
@@ -74,40 +84,19 @@ window.addEventListener("load", function(){
           document.getElementById(box).style.display = "none";
       });
   }
+
   for(i = 0; i<adicionar.length; i++){
 
         adicionar[i].addEventListener('click',function(event){
         event.preventDefault();
         var resourceArea = document.getElementById('textResource').value;
-        //var resourceArea = document.getElementsByClassName('texto');
-        //for(var j = 0; j<resourceArea.length;j++){
-          //var elementos = resourceArea[j].value;
-          var resourceAreaSplit = resourceArea.split(",");
+        var resourceAreaSplit = resourceArea.split(",");
                 resourceAreaSplit.forEach(function(elemento){
                     resourcesManager.addResource(elemento);
                     resourcesManager.printHtmlResource(document.getElementById('showresources'));
                 });
-        //}
+
 
         });
   }
 });
-
-
-/*
-window.addEventListener("load", function(){
-    var resourcesManager = new ResourcesManager();
-    var buttonAddResource = document.getElementById('agregarResource');
-
-    buttonAddResource.addEventListener('click',function(){
-
-      var resourceArea = document.getElementById('textResource').value;
-      var resourceAreaSplit = resourceArea.split(",");
-      resourceAreaSplit.forEach(function(elemento){
-      resourcesManager.addResource(elemento);
-      resourcesManager.printHtmlResource(document.getElementById('showresources'));
-        //resourceArea.value = " ";
-    });
-  });
-});
-*/
