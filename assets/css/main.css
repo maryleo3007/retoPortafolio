@@ -11,18 +11,15 @@ h1{
 
 header{
 float: right;
-
 }
 
 .ventanaPrincipal{}
 
 .ventana{
-
   margin-left: 5%;
   margin-right: 5%;
   position: relative;
   width: 90%;
-
 }
 
 .contenido {
@@ -31,15 +28,10 @@ float: right;
   left: 0%;
   width: 100%;
   position: absolute;
-
 }
 
-
-
 button{
-
   background-color: #f9f9f9;
-
   overflow: hidden;
 }
 
@@ -246,6 +238,7 @@ h4{
 	height: 450px;
   float: left;
 	display: inline-block;
+  padding: 0.5em;
 }
 #physicalResources1, #physicalResources4{
   background-color: #CCE8B5;
@@ -254,50 +247,48 @@ h4{
   background-color: #FFFBB9;
 }
 .physicalResources{
-    width: 100%;
+    width: 90%;
     height: 15%;
     border: 2px solid;
     border-color: #575C54;
     border-radius: 15px;
     margin-top: 30px;
     display: inline-block;
-    margin-left: 25px;
+    margin: 0.5em auto;
+    padding: 5px 0px 0px 5px;
 }
 .hr {
     border-left: 1px solid #B0B9A7;
-    height: 15px;
+    height: 15%;
     margin-left: auto;
     margin-right: auto;
     width: 1px;
 }
 .contenidoResources{
-    width: 80%;
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: auto;
-    margin-top: 10px;
-    word-break: break-all;
-    word-wrap: break-word;
+    height: 15%;
+    font-size: 90%;
 }
-
-
+.strongResource{
+  padding: 0px;
+  margin: auto;
+  overflow: hidden;
+}
 
 .box {
- color: #ff8c00 ; /* Color del texto */
- width: 45%;
- background:#E0EDD4 center left 5px no-repeat;
- border: 2px solid black ;
- border-radius: 9%;
- border-color: #705F29;
- position: absolute;
- z-index: 10;
- top: 33%;
- left: 5%;
- padding-left: 1%;
- padding-bottom: 1%;
- padding-top: 2%;
+   color: #ff8c00 ; /* Color del texto */
+   width: 45%;
+   background:#E0EDD4 center left 5px no-repeat;
+   border: 2px solid ;
+   border-radius: 15px 20px 15px 20px;
+   border-color: #705F29;
+   position: absolute;
+   z-index: 10;
+   top: 15%;
+   left: 5%;
+   padding-left: 1%;
+   padding-bottom: 1%;
+   padding-top: 2%;
 }
-
 
 .box:after{
   position: absolute;
@@ -307,13 +298,14 @@ h4{
   border-right: 0px solid #705F29;
   border-left: 2px solid #705F29;
   border-bottom: 0px solid #705F29;
-  top: 112%;
+  top: 115%;
   left: 30%;
   margin-left: -25px;
   content: '';
   transform: rotate(45deg);
-  margin-top: -25%;
+  margin-top: -27.7%;
   background:#E0EDD4 center left 1% no-repeat;
+  display: inline-block;
 }
 
 div .box input {
@@ -350,4 +342,14 @@ div .box input {
   text-decoration: none;
   vertical-align: middle;
   opacity: 0.5;
+}
+.add, .cerrar {
+  border-radius: 12px;
+  border: 1px solid black;
+  font-family: Arial;
+  color: #0d0c0d;
+  font-size: 12px;
+  padding: 2.5px 5px 2.50px 5px;
+  text-decoration: none;
+  margin-top: 5px;
 }
