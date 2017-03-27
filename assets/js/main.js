@@ -32,15 +32,6 @@ function ResourcesManager(){
 
         var array = this.resources;
         btneliminar.addEventListener("click",this);
-        /*btneliminar.addEventListener("click",function(e){
-            e.preventDefault();
-            var resourceId = e.target.parentNode.parentNode.getAttribute("data-id");
-            array = array.filter(function(item){
-              return item.id != resourceId;
-            });
-
-            this.parentNode.parentNode.parentNode.removeChild(post);
-        });*/
         post.appendChild(span);
         post.appendChild(btneliminar);
         btneliminar.appendChild(txtbtneliminar);
@@ -50,13 +41,13 @@ function ResourcesManager(){
     this.handleEvent = function(e){
       e.preventDefault();
       var id = e.target.parentNode.getAttribute("data-id");
-      console.log(e.target.parentNode);
+      //console.log(e.target.parentNode);
       if(e.type == "click"){
         this.resources = this.resources.filter(function(item){
 
           return item.id != id ;
         });
-        console.log(this.resources)
+      //  console.log(this.resources)
       }
       e.target.parentNode.parentNode.removeChild(e.target.parentNode);
     }
