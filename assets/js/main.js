@@ -26,31 +26,44 @@ function ResourcesManager(){
         var span = document.createElement("span");
         span.innerHTML = type;
 
-        var eliminar = document.createElement("a");
-        eliminar.setAttribute("href","#");
         var btneliminar = document.createElement("BUTTON");
         btneliminar.setAttribute("class","eliminarResource");
         var txtbtneliminar = document.createTextNode(" X");
 
         var array = this.resources;
-        btneliminar.addEventListener("click",function(e){
+        btneliminar.addEventListener("click",this);
+        /*btneliminar.addEventListener("click",function(e){
             e.preventDefault();
             var resourceId = e.target.parentNode.parentNode.getAttribute("data-id");
             array = array.filter(function(item){
               return item.id != resourceId;
             });
+
             this.parentNode.parentNode.parentNode.removeChild(post);
-        });
-        console.log(array);
+        });*/
         post.appendChild(span);
-        post.appendChild(eliminar);
-        eliminar.appendChild(btneliminar);
+        post.appendChild(btneliminar);
         btneliminar.appendChild(txtbtneliminar);
         return post;
     }
 
+    this.handleEvent = function(e){
+      e.preventDefault();
+      var id = e.target.parentNode.getAttribute("data-id");
+      console.log(e.target.parentNode);
+      if(e.type == "click"){
+        this.resources = this.resources.filter(function(item){
+
+          return item.id != id ;
+        });
+        console.log(this.resources)
+      }
+      e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+    }
+
 
 }
+
 
 
 function posicionBox(box) {
