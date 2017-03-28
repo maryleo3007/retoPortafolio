@@ -36,6 +36,7 @@ function ResourcesManager(){
     e.preventDefault();
     var id = e.target.parentNode.getAttribute("data-id");
     //console.log(e.target.parentNode);
+    console.log(e.target)
     if(e.type == "click"){
       this.resources = this.resources.filter(function(item){
 
@@ -94,8 +95,13 @@ window.addEventListener("load", function(){
                     alert("you may input some text");
                   }
 
+
             });
              document.getElementById('textResource').value = '';
         });
   }
 });
+
+if(typeof exports !== 'undefined') {
+  exports.ResourcesManager = ResourcesManager;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "reto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryleo3007/retoPortafolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryleo3007/retoPortafolio/issues"
+  },
+  "homepage": "https://github.com/maryleo3007/retoPortafolio#readme"
+}
