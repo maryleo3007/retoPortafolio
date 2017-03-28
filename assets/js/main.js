@@ -40,58 +40,13 @@ function ResourcesManager(){
     this.handleEvent = function(e){
       e.preventDefault();
       var id = e.target.parentNode.getAttribute("data-id");
-      //console.log(e.target.parentNode);
       if(e.type == "click"){
         this.resources = this.resources.filter(function(item){
-
           return item.id != id ;
         });
-      //  console.log(this.resources)
       }
       e.target.parentNode.parentNode.removeChild(e.target.parentNode);
     }
 
 
 }
-
-
-
-
-window.addEventListener("load", function(){
-
-  var resourcesManager = new ResourcesManager();
-  var popup = document.getElementsByClassName("tooltip");
-  var cerrar = document.getElementsByClassName("cerrar");
-  var adicionar = document.getElementsByClassName("add");
-
-  for(var i=0; i<popup.length; i++){
-      popup[i].addEventListener('click',function (event) {
-          event.preventDefault();
-          var box = this.name;
-          posicionBox(box);
-          document.getElementById(box).style.display = "inline-block";
-      });
-  }
-  for(i=0; i<cerrar.length; i++){
-      cerrar[i].addEventListener("click", function (evt) {
-          evt.preventDefault();
-          var box = this.name;
-          document.getElementById(box).style.display = "none";
-      });
-  }
-
-  for(i = 0; i<adicionar.length; i++){
-
-        adicionar[i].addEventListener('click',function(event){
-        event.preventDefault();
-        var resourceArea = document.getElementById('textResource').value;
-        var resourceAreaSplit = resourceArea.split(",");
-                resourceAreaSplit.forEach(function(elemento){
-                    resourcesManager.addResource(elemento);
-                    resourcesManager.printHtmlResource(document.getElementById('showresources'));
-                });
-
-
-        });
-  }
-});
