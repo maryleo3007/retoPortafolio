@@ -1,7 +1,3 @@
-var Agents = [ {nombre : "bjstdmngbgr02.thoughtworks.com", estado : "idle",     ip : "192.168.1.2", directorio : "/var/lib/cruise-agent"},
-        			 {nombre : "bjstdmngbgr03.thoughtworks.com", estado : "building", ip : "192.168.1.3", directorio : "/var/lib/cruise-agent"},
-        			 {nombre : "bjstdmngbgr04.thoughtworks.com", estado : "building", ip : "192.168.1.4", directorio : "/var/lib/cruise-agent"},
-        			 {nombre : "bjstdmngbgr05.thoughtworks.com", estado : "idle",     ip : "192.168.1.5", directorio : "/var/lib/cruise-agent"}];
 
 function AgentsManager(){
 
@@ -89,6 +85,7 @@ function AgentsManager(){
       box1.style.top = posicionBox(box);
       box1.style.display = "inline-block";
       e.target.parentNode.appendChild(box1);
+
     }
   }
 
@@ -122,9 +119,23 @@ function createBox (array,id){
       texto = texto.split(",");
       texto.forEach(function(elemento){
           var parent = event.target.parentNode.parentNode.parentNode.childNodes[6];
-          array[id].resource.addResource(elemento);
-          array[id].resource.printHtmlResource(parent);
+          if(elemento != ""){
+            for(i=0; i<array[id].resource.resources.length; i++){
+              if(array[id].resource.resources[i].type == elemento){
+                var j=1;
+                break;
+              }
+            }
+            if(j!=1){
+
+              array[id].resource.addResource(elemento);
+              array[id].resource.printHtmlResource(parent);
+            }
+
+          }
       });
+      e.target.parentNode.parentNode.style.display = "none";
+
   });
   var closeButton = document.createElement("button");
   closeButton.setAttribute("class","cerrar");
@@ -142,17 +153,3 @@ function createBox (array,id){
   return box;
 
 }
-
-
-window.addEventListener("load", function(){
-
-  var agentsManager = new AgentsManager();
-
-  Agents.forEach(function(item){
-    agentsManager.addAgent(item.nombre,item.estado, item.ip, item.directorio);
-    agentsManager.printHtmlAgent(document.getElementById("pysical"));
-
-  });
-
-
-});
