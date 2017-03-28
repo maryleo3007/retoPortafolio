@@ -12,24 +12,24 @@ function ResourcesManager(){
     },this);
   }
   this.createHtmlResource = function(type,id){
-      var post = document.createElement("div");
-      post.setAttribute('data-id',id)
-      post.setAttribute("class","data-id");
-      var span = document.createElement("span");
-      span.setAttribute("class","spanresource");
-      span.innerHTML = type;
+    var post = document.createElement("div");
+    post.setAttribute('data-id',id)
+    post.setAttribute("class","data-id");
+    var span = document.createElement("span");
+    span.setAttribute("class","spanresource");
+    span.innerHTML = type;
 
-      var btneliminar = document.createElement("BUTTON");
-      btneliminar.setAttribute("class","eliminarResource");
-      var txtbtneliminar = document.createTextNode(" X");
+    var btneliminar = document.createElement("BUTTON");
+    btneliminar.setAttribute("class","eliminarResource");
+    var txtbtneliminar = document.createTextNode(" X");
 
-      var arrayResources = this.resources;
+    var arrayResources = this.resources;
 
-      btneliminar.addEventListener("click",this);
-      post.appendChild(span);
-      post.appendChild(btneliminar);
-      btneliminar.appendChild(txtbtneliminar);
-      return post;
+    btneliminar.addEventListener("click",this);
+    post.appendChild(span);
+    post.appendChild(btneliminar);
+    btneliminar.appendChild(txtbtneliminar);
+    return post;
   }
 
   this.handleEvent = function(e){
