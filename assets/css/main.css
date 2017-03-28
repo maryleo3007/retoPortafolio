@@ -241,12 +241,7 @@ h4{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.pysical {
-  width: 60%;
-	height: 450px;
-  float: left;
-	display: inline-block;
-}
+
 #physicalResources1, #physicalResources4{
   background-color: #CCE8B5;
 }
@@ -262,6 +257,7 @@ h4{
     margin-top: 30px;
     display: inline-block;
     margin-left: 25px;
+    background-color: #FFFBB9;
 }
 .hr {
     border-left: 1px solid #B0B9A7;

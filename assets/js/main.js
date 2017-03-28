@@ -30,7 +30,6 @@ function ResourcesManager(){
         btneliminar.setAttribute("class","eliminarResource");
         var txtbtneliminar = document.createTextNode(" X");
 
-        var array = this.resources;
         btneliminar.addEventListener("click",this);
         post.appendChild(span);
         post.appendChild(btneliminar);
@@ -56,14 +55,6 @@ function ResourcesManager(){
 }
 
 
-
-function posicionBox(box) {
-  var mov = 20;
-  var inicial = 33;
-  var boxNew = document.getElementById(box);
-  box = box.split("-");
-  boxNew.style.top = (inicial + mov * box[1])+"%";
-}
 
 
 window.addEventListener("load", function(){
