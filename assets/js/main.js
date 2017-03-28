@@ -1,52 +1,51 @@
 function ResourcesManager(){
   this.resources = [];
-    this.id = 0;
-    this.addResource = function(type){
-       this.resources.push({
-          id: this.id,
-          type: type,
+  this.id = 0;
+  this.addResource = function(resource){
+    this.resources.push({id: this.id, type: resource,});
+    this.id++;
+  }
+  this.printHtmlResource = function(parent){
+    parent.innerHTML = "";
+    this.resources.forEach(function(item){
+      parent.appendChild(this.createHtmlResource(item.type,item.id));
+    },this);
+  }
+  this.createHtmlResource = function(type,id){
+      var post = document.createElement("div");
+      post.setAttribute('data-id',id)
+      post.setAttribute("class","data-id");
+      var span = document.createElement("span");
+      span.setAttribute("class","spanresource");
+      span.innerHTML = type;
 
-        });
-       this.id++;
+      var btneliminar = document.createElement("BUTTON");
+      btneliminar.setAttribute("class","eliminarResource");
+      var txtbtneliminar = document.createTextNode(" X");
+
+      var arrayResources = this.resources;
+
+      btneliminar.addEventListener("click",this);
+      post.appendChild(span);
+      post.appendChild(btneliminar);
+      btneliminar.appendChild(txtbtneliminar);
+      return post;
+  }
+
+  this.handleEvent = function(e){
+    e.preventDefault();
+    var id = e.target.parentNode.getAttribute("data-id");
+    //console.log(e.target.parentNode);
+    if(e.type == "click"){
+      this.resources = this.resources.filter(function(item){
+
+        return item.id != id ;
+      });
+    //  console.log(this.resources)
     }
-    this.deleteResouce = function(element){
-      var i = this.resources.indexOf(element);
-      if(i != -1){
-        this.resources.splice(i,1);
-      }
-    }
+    e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+  }
 
-    this.printHtmlResource = function(parent){
-      parent.innerHTML = "";
-      this.resources.forEach(function(item){
-        parent.appendChild(this.createHtmlResource(item.type,item.id));
-      },this);
-    }
-    this.createHtmlResource = function(type,id){
-        var post = document.createElement("div");
-        post.setAttribute('data-id',id)
-        post.setAttribute("class","data-id");
-        var span = document.createElement("span");
-        span.innerHTML = type;
-
-        var eliminar = document.createElement("a");
-        eliminar.setAttribute("href","#");
-
-        var btneliminar = document.createElement("BUTTON");
-        btneliminar.setAttribute("class","eliminarResource");
-        var txtbtneliminar = document.createTextNode(" X");
-        btneliminar.addEventListener("click",function(e){
-
-            e.preventDefault();
-            var resourceId = e.target.parentNode.parentNode.getAttribute("data-id");
-            this.parentNode.parentNode.parentNode.removeChild(post);
-        });
-        post.appendChild(span);
-        post.appendChild(eliminar);
-        eliminar.appendChild(btneliminar);
-        btneliminar.appendChild(txtbtneliminar);
-        return post;
-    }
 }
 
 function posicionBox(box) {
@@ -55,6 +54,7 @@ function posicionBox(box) {
   var boxNew = document.getElementById(box);
   box = box.split("-");
   boxNew.style.top = (inicial + mov * box[1])+"%";
+
 }
 
 window.addEventListener("load", function(){
@@ -69,10 +69,8 @@ window.addEventListener("load", function(){
           event.preventDefault();
           var box = this.name;
           posicionBox(box);
-          console.log(posicionBox(box));
 
           document.getElementById(box).style.display = "inline-block";
-          console.log(posicionBox(box));
       });
   }
   for(i=0; i<cerrar.length; i++){
@@ -85,25 +83,19 @@ window.addEventListener("load", function(){
   for(i = 0; i<adicionar.length; i++){
 
         adicionar[i].addEventListener('click',function(event){
-        event.preventDefault();
-        var resourceArea = document.getElementById('textResource').value;
-
-          var lista = document.getElementsByClassName('text');
-          for(var i = 0; i < lista.length ; i++){
-            console.log(lista[0]);
-          }
-          var box = this.name;
-          console.log(box);
-
+            event.preventDefault();
+            var resourceArea = document.getElementById('textResource').value;
             var resourceAreaSplit = resourceArea.split(",");
-                  resourceAreaSplit.forEach(function(elemento){
-                      if(elemento != ""){
-                        resourcesManager.addResource(elemento);
-                        resourcesManager.printHtmlResource(document.getElementById('showresources'));
-                      }
+            resourceAreaSplit.forEach(function(elemento){
+                  if(elemento != ""){
+                    resourcesManager.addResource(elemento);
+                    resourcesManager.printHtmlResource(document.getElementById('showresources'));
+                  }else{
+                    alert("you may input some text");
+                  }
 
-                  });
-
+            });
+             document.getElementById('textResource').value = '';
         });
   }
 });

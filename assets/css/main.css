@@ -257,6 +257,7 @@ h4{
     margin: 0.5em auto;
     padding: 5px 0px 0px 5px;
 }
+
 .hr {
     border-left: 1px solid #B0B9A7;
     height: 15%;
@@ -321,9 +322,10 @@ div .box input {
   display: inline-block;
 }
 .showresources{
-  position: relative;
+  position: absolute;
   display: inline-block;
   vertical-align: middle;
+  background-color: red;
 }
 .data-id{
   position: relative;
