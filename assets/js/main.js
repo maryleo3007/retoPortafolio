@@ -14,7 +14,7 @@ function ResourcesManager(){
   this.createHtmlResource = function(type,id){
     var post = document.createElement("div");
     post.setAttribute('data-id',id)
-    post.setAttribute("class","data-id");
+    post.setAttribute("class",'data-id');
     var span = document.createElement("span");
     span.setAttribute("class","spanresource");
     span.innerHTML = type;
@@ -72,7 +72,7 @@ window.addEventListener("load", function(){
           posicionBox(box);
 
           document.getElementById(box).style.display = "inline-block";
-      });
+      });
   }
   for(i=0; i<cerrar.length; i++){
       cerrar[i].addEventListener("click", function (evt) {
@@ -101,7 +101,6 @@ window.addEventListener("load", function(){
         });
   }
 });
-
 if(typeof exports !== 'undefined') {
   exports.ResourcesManager = ResourcesManager;
 }
