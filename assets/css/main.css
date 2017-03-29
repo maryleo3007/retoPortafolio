@@ -11,15 +11,18 @@ h1{
 
 header{
 float: right;
+
 }
 
 .ventanaPrincipal{}
 
 .ventana{
+
   margin-left: 5%;
   margin-right: 5%;
   position: relative;
   width: 90%;
+
 }
 
 .contenido {
@@ -28,10 +31,15 @@ float: right;
   left: 0%;
   width: 100%;
   position: absolute;
+
 }
 
+
+
 button{
+
   background-color: #f9f9f9;
+
   overflow: hidden;
 }
 
@@ -233,13 +241,7 @@ h4{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.pysical {
-  width: 60%;
-	height: 450px;
-  float: left;
-	display: inline-block;
-  padding: 0.5em;
-}
+
 #physicalResources1, #physicalResources4{
   background-color: #CCE8B5;
 }
@@ -253,43 +255,42 @@ h4{
     border-color: #575C54;
     border-radius: 15px;
     margin-top: 30px;
+    margin-left: 10px;
     display: inline-block;
-    margin: 0.5em auto;
     padding: 5px 0px 0px 5px;
+    background-color: #FFFBB9;
 }
-
 .hr {
     border-left: 1px solid #B0B9A7;
-    height: 15%;
+    height: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 1px;
 }
 .contenidoResources{
-    height: 15%;
-    font-size: 90%;
+    width: 80%;
+    display: inline-block;
+    margin: 0.5em auto;
+    padding: 5px 0px 0px 5px;
+    word-break: break-all;
+    word-wrap: break-word;
 }
-.strongResource{
-  padding: 0px;
-  margin: auto;
-  overflow: hidden;
+.box {
+ color: #ff8c00 ; /* Color del texto */
+ width: 45%;
+ background:#E0EDD4 center left 5px no-repeat;
+ border: 2px solid black ;
+ border-radius: 15px 20px 15px 20px;
+ border-color: #705F29;
+ position: absolute;
+ z-index: 10;
+ top: 33%;
+ left: 5%;
+ padding-left: 1%;
+ padding-bottom: 1%;
+ padding-top: 2%;
 }
 
-.box {
-   color: #ff8c00 ; /* Color del texto */
-   width: 45%;
-   background:#E0EDD4 center left 5px no-repeat;
-   border: 2px solid ;
-   border-radius: 15px 20px 15px 20px;
-   border-color: #705F29;
-   position: absolute;
-   z-index: 10;
-   top: 15%;
-   left: 5%;
-   padding-left: 1%;
-   padding-bottom: 1%;
-   padding-top: 2%;
-}
 
 .box:after{
   position: absolute;
@@ -299,14 +300,13 @@ h4{
   border-right: 0px solid #705F29;
   border-left: 2px solid #705F29;
   border-bottom: 0px solid #705F29;
-  top: 115%;
+  top: 112%;
   left: 30%;
   margin-left: -25px;
   content: '';
   transform: rotate(45deg);
-  margin-top: -27.7%;
+  margin-top: -25%;
   background:#E0EDD4 center left 1% no-repeat;
-  display: inline-block;
 }
 
 div .box input {
@@ -321,11 +321,11 @@ div .box input {
 .addSpecifyResources{
   display: inline-block;
 }
+
 .showresources{
-  position: absolute;
+  position: relative;
   display: inline-block;
   vertical-align: middle;
-  
 }
 .data-id{
   position: relative;
@@ -344,6 +344,7 @@ div .box input {
   text-decoration: none;
   vertical-align: middle;
   opacity: 0.5;
+
 }
 .add, .cerrar {
   border-radius: 12px;
