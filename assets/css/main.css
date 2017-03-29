@@ -3,7 +3,9 @@
 #login{
   float: right;
 }
-
+body{
+  min-width: 1024px;
+}
 h1{
   text-align: left;
   font-size-adjust: auto;
