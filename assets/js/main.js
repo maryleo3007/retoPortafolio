@@ -50,3 +50,7 @@ function ResourcesManager(){
 
 
 }
+
+if(typeof exports !== 'undefined') {
+  exports.ResourcesManager = ResourcesManager;
+}
